@@ -5,22 +5,18 @@
 <img max-height=200 height=200 src="https://github.com/ciph3rwoman/NewYorkTaxi/blob/main/OIP.jpg"/>
 </p>
 
-The goal of this project is using:
-
+The data that is used in this project is retrieved from th New York Taxi and Limo stats:
+- https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 - Azure Synapse Analytics
 - Azure Data Factor 
 - Power BI
 - Azure Blob Storage 
+- Use the SQL scripts attached
 
 <p align="left">
 <img max-height=150 height=150 src="https://github.com/ciph3rwoman/NewYorkTaxi/blob/main/SQL%20script%202.jpeg"/> </p> Getting started:
-
-The data that is used in this project is retrieved from th New York Taxi and Limo stats:
-- https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
-- Download the data sets
-- Use the SQL scripts attached
  
-# References:
+# Getting Started:
 
 For more information about Azure Synapse please have a look through the MSFT Documentation: 
 - Azure Synapse: https://docs.microsoft.com/en-us/azure/synapse-analytics
