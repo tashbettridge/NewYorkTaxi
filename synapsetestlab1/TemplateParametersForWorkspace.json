@@ -8,6 +8,9 @@
 		"synapsetestlab1-WorkspaceDefaultSqlServer_connectionString": {
 			"value": ""
 		},
+		"nyc_tlc_yellow_sasUri": {
+			"value": ""
+		},
 		"synapsetestlab1-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"value": "https://synapsetestlab1.dfs.core.windows.net"
 		}

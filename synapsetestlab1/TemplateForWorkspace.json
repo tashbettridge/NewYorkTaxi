@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'synapsetestlab1-WorkspaceDefaultSqlServer'"
 		},
+		"nyc_tlc_yellow_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'nyc_tlc_yellow'"
+		},
 		"synapsetestlab1-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://synapsetestlab1.dfs.core.windows.net"
@@ -26,6 +30,19 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/nyc_tlc_yellow')]",
+			"type": "Microsoft.Synapse/workspaces/linkedServices",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"sasUri": "[parameters('nyc_tlc_yellow_sasUri')]"
+				}
 			},
 			"dependsOn": []
 		},
@@ -107,6 +124,55 @@
 					}
 				},
 				"type": "SqlQuery"
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/SQL script 2')]",
+			"type": "Microsoft.Synapse/workspaces/sqlscripts",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"content": {
+					"query": "--- View the New York city taxi data by passenger account\nSELECT PassengerCount,\n      SUM(TripDistanceMiles) as SumTripDistance,\n      AVG(TripDistanceMiles) as AvgTripDistance\nFROM  dbo.Trip\nWHERE TripDistanceMiles > 0 AND PassengerCount > 0\nGROUP BY PassengerCount\nORDER BY PassengerCount;",
+					"metadata": {
+						"language": "sql"
+					},
+					"currentConnection": {
+						"poolName": "SQLPOOL1",
+						"databaseName": "SQLPOOL1"
+					}
+				},
+				"type": "SqlQuery"
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 1')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"metadata": {
+					"language_info": {
+						"name": "python"
+					}
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"source": [
+							"from azureml.opendatasets import NycTlcYellow\n",
+							"\n",
+							"data = NycTlcYellow()\n",
+							"df = data.to_spark_dataframe()\n",
+							"# Display 10 rows\n",
+							"display(df.limit(10))"
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
 			},
 			"dependsOn": []
 		}
