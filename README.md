@@ -2,7 +2,7 @@
 > By Tash 
 
 <p align="center">
-<img max-height=200 height=200 src=""/>
+<img max-height=200 height=200 src="https://github.com/ciph3rwoman/NewYorkTaxi/blob/main/OIP.jpg"/>
 </p>
 
 The data that is used in this project is retrieved from th New York Taxi and Limo stats https://azure.microsoft.com/en-us/services/open-datasets/catalog/nyc-taxi-limousine-commission-yellow-taxi-trip-records/. 
