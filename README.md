@@ -13,9 +13,6 @@ The data that is used in this project is retrieved from th New York Taxi and Lim
 - Azure Blob Storage 
 - Use the SQL scripts attached
 
-<p align="left">
-<img max-height=150 height=150 src="https://github.com/ciph3rwoman/NewYorkTaxi/blob/main/SQL%20script%202.jpeg"/> </p> Getting started:
- 
 # Getting Started:
 
 For more information about Azure Synapse please have a look through the MSFT Documentation: 
