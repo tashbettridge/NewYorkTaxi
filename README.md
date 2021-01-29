@@ -12,11 +12,8 @@ The goal of this project is using:
 - Power BI
 - Azure Blob Storage 
 
-<p align="center">
-<img max-height=100 height=100 src="https://github.com/ciph3rwoman/NewYorkTaxi/blob/main/SQL%20script%202.jpeg"/>
-</p>
-
-Getting started:
+<p align="left">
+<img max-height=150 height=150 src="https://github.com/ciph3rwoman/NewYorkTaxi/blob/main/SQL%20script%202.jpeg"/> </p> Getting started:
 
 The data that is used in this project is retrieved from th New York Taxi and Limo stats:
 - https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
