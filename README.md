@@ -21,3 +21,4 @@ For more information about Azure Synapse please have a look through the MSFT Doc
 - Power Bi: https://docs.microsoft.com/en-us/power-bi/fundamentals/service-get-started#:~:text=Tutorial:%20Get%20started%20creating%20in%20the%20Power%20BI,Q&A%20question%20box.%20...%204%20Reposition%20tiles.
 - Azure Datafactor: https://azure.microsoft.com/en-us/services/data-factory/?OCID=AID2100082_SEM_e53e21cff9631c555d5e41dc57a1e486:G:s&ef_id=e53e21cff9631c555d5e41dc57a1e486:G:s&msclkid=e53e21cff9631c555d5e41dc57a1e486
 
+Disclaimer - Lab originally produced by Microsoft. 
